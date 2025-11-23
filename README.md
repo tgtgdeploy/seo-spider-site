@@ -67,23 +67,23 @@ chmod +x deploy.sh
 
 ## 🌐 域名配置
 
-### VPS-1
+### VPS-1 (3个域名)
 - autopushnetwork.xyz
 - contentpoolzone.site
 - crawlboostnet.xyz
 
-### VPS-2
-- globalinsighthub.xyz
-- crawlenginepro.xyz
-- linkpushmatrix.site
-- rankspiderchain.xyz
-
-### VPS-3
-- infostreammedia.xyz
+### VPS-2 (6个域名)
 - seohubnetwork.xyz
 - spidertrackzone.xyz
 - trafficboostflow.site
+- globalinsighthub.xyz
 - adminapihub.xyz
+- infostreammedia.xyz
+
+### VPS-3 (3个域名)
+- rankspiderchain.xyz
+- linkpushmatrix.site
+- crawlenginepro.xyz
 
 ## 📖 工作原理
 

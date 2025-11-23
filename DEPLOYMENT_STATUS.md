@@ -63,23 +63,23 @@ crawlboostnet.xyz        → 下载、APK、安卓
 **环境变量:** `.env.vps1.example` → `.env.local`
 **VPS_NUMBER:** 1
 
-#### VPS-2 (4个域名)
+#### VPS-2 (6个域名)
 ```
+seohubnetwork.xyz        → 下载、安装、指南
+spidertrackzone.xyz      → 下载、安装、指南
+trafficboostflow.site    → 下载、安装、指南
 globalinsighthub.xyz     → 教程、使用、功能
-crawlenginepro.xyz       → 更新、版本、新功能
-linkpushmatrix.site      → 更新、版本、新功能
-rankspiderchain.xyz      → 更新、版本、新功能
+adminapihub.xyz          → 分析、趋势、营销
+infostreammedia.xyz      → 资讯、动态、新闻
 ```
 **环境变量:** `.env.vps2.example` → `.env.local`
 **VPS_NUMBER:** 2
 
-#### VPS-3 (5个域名)
+#### VPS-3 (3个域名)
 ```
-infostreammedia.xyz      → 资讯、动态、新闻
-seohubnetwork.xyz        → 下载、安装、指南
-spidertrackzone.xyz      → 下载、安装、指南
-trafficboostflow.site    → 下载、安装、指南
-adminapihub.xyz          → 分析、趋势、营销
+rankspiderchain.xyz      → 更新、版本、新功能
+linkpushmatrix.site      → 更新、版本、新功能
+crawlenginepro.xyz       → 更新、版本、新功能
 ```
 **环境变量:** `.env.vps3.example` → `.env.local`
 **VPS_NUMBER:** 3
@@ -251,8 +251,8 @@ pm2 restart spider-site
 
 ### 宝塔面板配置
 - [ ] VPS-1 添加了3个网站
-- [ ] VPS-2 添加了4个网站
-- [ ] VPS-3 添加了5个网站
+- [ ] VPS-2 添加了6个网站
+- [ ] VPS-3 添加了3个网站
 - [ ] 所有网站配置了Nginx反向代理
 - [ ] 所有网站申请了SSL证书
 - [ ] 所有网站开启了强制HTTPS

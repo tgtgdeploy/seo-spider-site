@@ -4,23 +4,23 @@
 
 ### VPS 分配方案
 ```
-VPS-1 (IP: xxx.xxx.xxx.1)
+VPS-1 (IP: xxx.xxx.xxx.1) - 3个域名
 ├─ autopushnetwork.xyz
 ├─ contentpoolzone.site
 └─ crawlboostnet.xyz
 
-VPS-2 (IP: xxx.xxx.xxx.2)
-├─ globalinsighthub.xyz
-├─ crawlenginepro.xyz
-├─ linkpushmatrix.site
-└─ rankspiderchain.xyz
-
-VPS-3 (IP: xxx.xxx.xxx.3)
-├─ infostreammedia.xyz
+VPS-2 (IP: xxx.xxx.xxx.2) - 6个域名
 ├─ seohubnetwork.xyz
 ├─ spidertrackzone.xyz
 ├─ trafficboostflow.site
-└─ adminapihub.xyz
+├─ globalinsighthub.xyz
+├─ adminapihub.xyz
+└─ infostreammedia.xyz
+
+VPS-3 (IP: xxx.xxx.xxx.3) - 3个域名
+├─ rankspiderchain.xyz
+├─ linkpushmatrix.site
+└─ crawlenginepro.xyz
 ```
 
 ---

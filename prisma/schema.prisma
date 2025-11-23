@@ -1,0 +1,106 @@
+// 使用 Admin 后台的数据库 schema
+// 这里只需要定义我们用到的模型
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Website {
+  id          String   @id @default(cuid())
+  name        String
+  domain      String   @unique
+  description String?
+
+  seoTitle       String?
+  seoDescription String?
+  seoKeywords    String[]
+
+  status    WebsiteStatus @default(ACTIVE)
+
+  domainAliases DomainAlias[]
+  posts         Post[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model DomainAlias {
+  id     String @id @default(cuid())
+  domain String @unique
+
+  websiteId String
+  website   Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  siteName        String
+  siteDescription String
+
+  primaryTags   String[]
+  secondaryTags String[]
+
+  status     DomainStatus @default(ACTIVE)
+  isPrimary  Boolean      @default(false)
+  domainType DomainType   @default(SPIDER_POOL)
+
+  visits    Int       @default(0)
+  lastVisit DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id      String @id @default(cuid())
+  websiteId String
+  website   Website @relation(fields: [websiteId], references: [id], onDelete: Cascade)
+
+  title   String
+  slug    String
+  content String @db.Text
+  excerpt String?
+
+  coverImage String?
+
+  status PostStatus @default(DRAFT)
+
+  metaTitle       String?
+  metaDescription String?
+  metaKeywords    String[]
+
+  category String?
+  tags     String[]
+
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([websiteId, slug])
+}
+
+enum WebsiteStatus {
+  ACTIVE
+  INACTIVE
+  MAINTENANCE
+}
+
+enum DomainStatus {
+  ACTIVE
+  PENDING
+  SUSPENDED
+}
+
+enum DomainType {
+  MAIN_SITE
+  REDIRECT_PAGE
+  SPIDER_POOL
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}

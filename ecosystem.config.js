@@ -11,8 +11,8 @@ module.exports = {
   apps: [
     {
       name: 'spider-site',
-      script: 'node',
-      args: '.next/standalone/server.js',
+      script: '.next/standalone/server.js',
+      interpreter: 'node',
       cwd: './',
       instances: 1,
       exec_mode: 'cluster',
